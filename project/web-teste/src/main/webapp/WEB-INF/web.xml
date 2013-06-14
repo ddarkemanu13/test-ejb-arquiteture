@@ -3,7 +3,7 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-	<display-name>Archetype Created Web Application</display-name>
+	<display-name>Web Application</display-name>
 
 	<context-param>
 		<param-name>javax.faces.CONFIG_FILES</param-name>
@@ -47,10 +47,10 @@
 	</session-config>
 
 	<welcome-file-list>
-		<welcome-file>/index.xhtml</welcome-file>
+		<welcome-file>/inicio.xhtml</welcome-file>
 	</welcome-file-list>
 	
-	<security-constraint>
+	<!-- <security-constraint>
 	<web-resource-collection>
 		<web-resource-name>HtmlAuth</web-resource-name>
 		<description>application security constraints
@@ -70,6 +70,6 @@
 	<security-role>
 		<role-name>Manager</role-name>
 	</security-role>
-	
+	 -->
 
 </web-app>

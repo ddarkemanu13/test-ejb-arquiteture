@@ -3,8 +3,6 @@ package dataModel;
 import java.util.List;
 import java.util.Map;
 
-import javax.ejb.EJB;
-
 import org.business.teste.App;
 import org.business.teste.service.IAppService;
 import org.primefaces.model.LazyDataModel;
@@ -16,22 +14,18 @@ public class AppLazyList extends LazyDataModel<App> {
 
 	private List<App> apps;
 
-	@EJB
 	IAppService appService;
+	
+	public AppLazyList(IAppService appService) {
+		this.appService = appService;
+	}
 
 	@Override
-	public List<App> load(int initPosition, int totalRows, String field,
-			SortOrder orderType, Map<String, String> filters) {
+	public List<App> load(int initPosition, int totalRows, String field, SortOrder orderType, Map<String, String> filters) {
 
-		String order = orderType.toString();
-		if (SortOrder.UNSORTED.equals(orderType)) {
-			order = SortOrder.ASCENDING.toString();
-		}
-
-		this.apps = this.appService.findWithPagination(initPosition, totalRows,
-				field, order, filters);
-		if (getRowCount() <= 0 || (filters != null && !filters.isEmpty())) {
-			setRowCount(appService.countAll(filters));
+		this.apps = this.appService.findWithPagination(initPosition, totalRows);
+		if (getRowCount() <= 0) {
+			setRowCount(this.appService.countAll());
 		}
 
 		setPageSize(totalRows);

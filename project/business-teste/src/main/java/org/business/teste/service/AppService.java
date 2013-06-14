@@ -1,7 +1,6 @@
 package org.business.teste.service;
 
 import java.util.List;
-import java.util.Map;
 
 import javax.ejb.EJB;
 import javax.ejb.Remote;
@@ -21,14 +20,17 @@ public class AppService implements IAppService {
 		this.appDAO.appPrint(string);
 	}
 
-	public List<App> findWithPagination(int initPosition, int totalRows,
-			String field, String orderType,
-			Map<String, String> filters) {
-		return this.appDAO.findWithPagination(initPosition, totalRows, field, orderType, filters);
+	public List<App> findWithPagination(int initPosition, int totalRows) {
+		return this.appDAO.findWithPagination(initPosition, totalRows);
 	}
 
-	public int countAll(Map<String, String> filters) {
-		return this.countAll(filters);
+	public int countAll() {
+		return this.appDAO.countAll();
+	}
+
+	@Override
+	public List<App> findAll() {
+		return this.appDAO.findAll();
 	}
 
 }

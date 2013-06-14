@@ -1,10 +1,10 @@
 <jboss-web>
-    <security-domain>mytest</security-domain>
+  <!--   <security-domain>mytest</security-domain>
     <valve>
         <class-name>org.apache.catalina.authenticator.SingleSignOn</class-name>
         <param>
             <param-name>maxEmptyLife</param-name>
             <param-value>900</param-value>
         </param>
-    </valve>
+    </valve> -->
 </jboss-web>

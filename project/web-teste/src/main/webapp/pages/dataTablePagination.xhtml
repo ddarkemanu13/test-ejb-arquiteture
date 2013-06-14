@@ -11,14 +11,19 @@
 
 	<body>
 		<h:form>
-			<h2>Teste App web </h2>
+			<h2>Data Table Pagination</h2>
 			
 			<h:messages />
 			
+			<h:outputLabel value="Total registers: " />
+			<h:inputText value="#{lazyLoadDataTableController.numberOfRegisters}" disabled="true" />
+			
+			<br /><br />
+				
 			<p:dataTable value="#{lazyLoadDataTableController.apps}"
 	             var="app"
 	             paginator="true"
-	             rows="10"
+	             rows="5"
 	             paginatorTemplate="{CurrentPageReport}  {FirstPageLink}
 	                                {PreviousPageLink} {PageLinks}
 	                                {NextPageLink} {LastPageLink}
@@ -27,11 +32,11 @@
 	             style="width: 40%"
 	             lazy="true">
 	             
-	             <p:column headerText="ID">
+	             <p:column headerText="ID" sortBy="#{app.id}" >
 	             	<h:outputText value="#{app.id}" />
 	             </p:column>
 	             
-	             <p:column headerText="Description">
+	             <p:column headerText="Description" sortBy="#{app.description}">
 	             	<h:outputText value="#{app.description}" />
 	             </p:column>
 	             
