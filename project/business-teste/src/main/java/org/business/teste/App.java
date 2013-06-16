@@ -9,10 +9,23 @@ public class App extends AbstractEntity {
 
 	private String description;
 	
+	public App() {
+	}
+	
+	public App(Long id, String description) {
+		this.id = id;
+		this.description = description;
+	}
+	
 	public String getDescription() {
 		return description;
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	@Override
+	public String toString() {
+		return this.id +" - "+ this.description;
 	}
 }
