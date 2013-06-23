@@ -33,4 +33,9 @@ public class AppService implements IAppService {
 		return this.appDAO.findAll();
 	}
 
+	@Override
+	public void save(App app) {
+		this.appDAO.create(app);
+	}
+
 }

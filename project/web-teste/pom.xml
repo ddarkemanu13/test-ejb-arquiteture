@@ -25,11 +25,24 @@
             <artifactId>primefaces</artifactId>
             <version>3.5</version>
         </dependency>
-		
-
+		 <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.17.1</version>
+        </dependency>
+         <dependency>
+        	<groupId>com.sun.jersey</groupId>
+        	<artifactId>jersey-json</artifactId>
+        	<version>1.17.1</version>
+        </dependency>
 		<dependency>
 			<groupId>com.teste</groupId>
 			<artifactId>business-teste</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.teste</groupId>
+			<artifactId>project-commons</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 

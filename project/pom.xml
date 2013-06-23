@@ -41,5 +41,6 @@
   	<module>business-teste</module>
   	<module>web-teste</module>
     <module>app-teste</module>
+    <module>project-commons</module>
   </modules>
 </project>

@@ -5,7 +5,12 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/test"/>
+        <dependent-module archiveName="business-teste-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/business-teste/business-teste">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="project-commons-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/project-commons/project-commons">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="project-ws"/>
         <property name="java-output-path" value="/project-ws/target/classes"/>
     </wb-module>
