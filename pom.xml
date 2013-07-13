@@ -10,8 +10,8 @@
   <name>main</name>
   
   <modules>
-  	<module>project</module>
-  	<module>war-project</module>
+    <module>project</module>
+    <module>war-project</module>
     <module>project-ws</module>
   </modules>
   

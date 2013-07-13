@@ -45,7 +45,6 @@
 			<artifactId>project-commons</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
