@@ -1,11 +1,19 @@
 /project/app-teste/target
 /project/business-teste/target
 /project/web-teste/target
-/war-project/target
-/bin
+/project/project-commons/target
 /project/bin
+
+/war-project/target
 /war-project/bin
+
+/project-ws/target
+/project-ws/bin
+
+/bin
 /RemoteSystemsTempFiles
+
+
 
 # OS generated files #
 .DS_Store
