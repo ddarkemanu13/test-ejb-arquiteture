@@ -1,4 +1,4 @@
-package org.business.utils.dao;
+package org.business.teste.utils.dao;
 
 import java.util.List;
 

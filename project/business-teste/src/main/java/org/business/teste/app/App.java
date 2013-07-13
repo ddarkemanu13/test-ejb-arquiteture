@@ -1,6 +1,8 @@
-package org.business.teste;
+package org.business.teste.app;
 
 import javax.persistence.Entity;
+
+import org.business.teste.AbstractEntity;
 
 @Entity(name = "APP")
 public class App extends AbstractEntity {

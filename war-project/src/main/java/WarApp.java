@@ -4,7 +4,7 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-import org.business.teste.service.IAppService;
+import org.business.teste.service.app.IAppService;
 
 
 @ManagedBean(name = "warApp")

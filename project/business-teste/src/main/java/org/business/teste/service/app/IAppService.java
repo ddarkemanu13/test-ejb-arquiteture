@@ -1,8 +1,8 @@
-package org.business.teste.service;
+package org.business.teste.service.app;
 
 import java.util.List;
 
-import org.business.teste.App;
+import org.business.teste.app.App;
 
 public interface IAppService {
 	

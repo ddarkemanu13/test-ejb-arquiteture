@@ -6,8 +6,8 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import org.business.teste.App;
-import org.business.teste.service.IAppService;
+import org.business.teste.app.App;
+import org.business.teste.service.app.IAppService;
 import org.primefaces.model.LazyDataModel;
 
 import dataModel.AppLazyList;

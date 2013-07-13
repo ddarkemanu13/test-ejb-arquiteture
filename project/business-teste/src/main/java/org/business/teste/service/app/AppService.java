@@ -1,4 +1,4 @@
-package org.business.teste.service;
+package org.business.teste.service.app;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import javax.ejb.EJB;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 
-import org.business.teste.App;
-import org.business.teste.dao.IAppDAO;
+import org.business.teste.app.App;
+import org.business.teste.dao.app.IAppDAO;
 
 @Stateless(name = "AppService")
 @Remote(IAppService.class)
