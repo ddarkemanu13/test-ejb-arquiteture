@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title> Teste App </title>  
+        
+        <script type="text/javascript">
+            function dialogMBeanValidation(xhr, status, args) {
+                if (!args.confirm) {                    
+                    jQuery('#dlgMBean').effect("shake", { times:3 }, 100);
+                } else {
+                	dlgMBean.hide();
+                }
+            }
+        </script>
+    </h:head>
+
+	<body>
+		<h1>Dialog validation</h1>
+		
+		<h:form>
+			<p:growl autoUpdate="true"/>
+			<p:commandButton value="Dialog Validation MBean" onclick="dlgMBean.show()" process="@this"/>
+			<p:commandButton value="Dialog Validation Client" onclick="dlgClient.show()" process="@this"/>
+			
+			<p:dialog modal="true" widgetVar="dlgMBean" header="Dialog Validation on MBean"  resizable="false" width="300" height="100" >
+				<h:outputLabel value="Text: " />
+				<h:inputText id="ipttext" value="#{dialogValidationController.text}" />
+				
+				<br /><br />
+				<p:commandButton value="Confirm" actionListener="#{dialogValidationController.dialogValidation}" 
+	             	oncomplete="dialogMBeanValidation(xhr, status, args)" update="ipttext" >
+	             	<f:attribute name="text" value="#{dialogValidationController.text}" />
+	             </p:commandButton>	
+				<p:commandButton value="Cancel" onclick="dlgMBean.hide();"/>
+			</p:dialog>
+			
+			
+			
+			<p:dialog modal="true" widgetVar="dlgClient" header="Dialog Validation on Client" resizable="false" width="300" height="100" >
+				<h:outputLabel value="Text: " />
+				<h:inputText id="ipttextclient" value="#{dialogValidationController.text}"/>
+				
+				<br /><br />
+				<p:commandButton value="Confirm" actionListener="#{dialogValidationController.cleanInput}" 
+					oncomplete="if (#{not facesContext.validationFailed}) dlgClient.hide()"/>
+				<p:commandButton value="Cancel" onclick="dlgClient.hide();"/>
+			</p:dialog>
+		
+		</h:form>
+	</body>
+
+   
+</html>
+
