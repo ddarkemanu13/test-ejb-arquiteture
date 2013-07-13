@@ -3,6 +3,7 @@ package org.business.teste.dao;
 import java.util.List;
 
 import org.business.teste.App;
+import org.business.utils.dao.IDefaultDAO;
 
 public interface IAppDAO extends IDefaultDAO<App> {
 	

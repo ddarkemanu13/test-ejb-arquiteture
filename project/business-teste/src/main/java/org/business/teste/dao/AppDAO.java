@@ -6,6 +6,7 @@ import javax.ejb.Local;
 import javax.ejb.Stateless;
 
 import org.business.teste.App;
+import org.business.utils.dao.DefaultDAO;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 

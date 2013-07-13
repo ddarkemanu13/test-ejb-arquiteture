@@ -1,4 +1,4 @@
-package org.business.teste.dao;
+package org.business.utils.dao;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
