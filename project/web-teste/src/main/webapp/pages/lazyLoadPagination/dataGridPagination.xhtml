@@ -11,7 +11,7 @@
 
 	<body>
 		<h:form>
-			<h2>Data Table Pagination</h2>
+			<h2>Data Grid Pagination</h2>
 			
 			<h:messages />
 			
@@ -20,7 +20,7 @@
 			
 			<br /><br />
 				
-			<p:dataTable value="#{lazyLoadDataTableController.apps}"
+			<p:dataGrid value="#{lazyLoadDataTableController.apps}"
 	             var="app"
 	             paginator="true"
 	             rows="5"
@@ -30,17 +30,12 @@
 	                                {RowsPerPageDropdown}"
 	                                rowsPerPageTemplate="5,10,15"
 	             style="width: 40%"
-	             lazy="true">
-	             
-	             <p:column headerText="ID" sortBy="#{app.id}" >
-	             	<h:outputText value="#{app.id}" />
-	             </p:column>
+	             lazy="true" columns="1">
 	             
 	             <p:column headerText="Description" sortBy="#{app.description}">
 	             	<h:outputText value="#{app.description}" />
 	             </p:column>
-	             
-	          </p:dataTable>
+	          </p:dataGrid>
 	          
 		</h:form>
 	</body>

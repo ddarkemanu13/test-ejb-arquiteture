@@ -1,0 +1,17 @@
+<pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://ocpsoft.org/schema/rewrite-config-prettyfaces
+                      http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd">
+
+   	<url-mapping id="viewListProduct">
+		<pattern value="/pages/url-writters/listAllProducts" />
+		<view-id value="/pages/url-writters/listProducts.xhtml" />
+	</url-mapping> 
+
+	<url-mapping id="viewProduct">
+		<pattern value="/pages/url-writters/#{idProduct : productUrlsController.idUrlParam}" />
+		<view-id value="/pages/url-writters/product.xhtml" />
+		<action>#{urlWrittersController.openProduct}</action>
+	</url-mapping>                    
+                      
+</pretty-config>

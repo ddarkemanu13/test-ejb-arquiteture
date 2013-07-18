@@ -8,6 +8,7 @@ import javax.faces.bean.SessionScoped;
 
 import org.business.teste.app.App;
 import org.business.teste.service.app.IAppService;
+import org.primefaces.event.data.PageEvent;
 import org.primefaces.model.LazyDataModel;
 
 import dataModel.AppLazyList;
@@ -35,6 +36,10 @@ public class LazyLoadDataTableController implements Serializable {
 			this.apps = new AppLazyList(this.appService);
 		}
 		return this.apps;
+	}
+	
+	public void paginationListener(PageEvent page) {
+		System.out.println("Page : " + page.getPage());
 	}
 
 	public void setApps(LazyDataModel<App> apps) {

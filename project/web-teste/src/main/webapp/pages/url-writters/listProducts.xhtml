@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pretty="http://ocpsoft.com/prettyfaces">
+
+    <h:head>
+        <title> Teste App </title>   
+    </h:head>
+
+	<body>
+		<h:form>
+			<h2>List Products</h2>
+			
+			<pretty:link mappingId="viewListProduct" >
+				<h:outputLabel value="List" />
+			</pretty:link>  <br />
+			
+			<p:dataTable value="#{urlWrittersController.products}"
+	             var="product"
+	             rows="5"
+	             paginatorTemplate="{CurrentPageReport}  {FirstPageLink}
+	                                {PreviousPageLink} {PageLinks}
+	                                {NextPageLink} {LastPageLink}
+	                                {RowsPerPageDropdown}"
+	                                rowsPerPageTemplate="5,10,15"
+	             style="width: 40%">
+	             
+	             <p:column headerText="ID" sortBy="#{product.id}" >
+	             	<h:outputText value="#{product.id}" />
+	             </p:column>
+	             <p:column headerText="Category" sortBy="#{product.category}">
+	             	<h:outputText value="#{product.category}" />
+	             </p:column>
+	             <p:column headerText="Description" sortBy="#{product.description}">
+	             	<h:outputText value="#{product.description}" />
+	             </p:column>
+	             <p:column headerText="Options" >
+	             	<pretty:link mappingId="viewProduct" title="Open">
+	             		<h:outputLabel value="Open " />
+	             		<f:param value="#{product.id}" />
+	             	</pretty:link>
+		          </p:column>
+	          </p:dataTable>
+	          
+		</h:form>
+	</body>
+
+   
+</html>
+

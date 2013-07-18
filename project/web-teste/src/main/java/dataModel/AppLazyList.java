@@ -27,7 +27,9 @@ public class AppLazyList extends LazyDataModel<App> {
 		if (getRowCount() <= 0) {
 			setRowCount(this.appService.countAll());
 		}
-
+		
+		System.out.println("getRowCount " + getRowCount());
+		
 		setPageSize(totalRows);
 		return this.apps;
 	}
