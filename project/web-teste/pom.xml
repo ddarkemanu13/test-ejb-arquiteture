@@ -11,7 +11,6 @@
 	<artifactId>web-teste</artifactId>
 	<packaging>war</packaging>
 	<name>web-teste Maven Webapp</name>
-	<url>http://maven.apache.org</url>
 
 	<dependencies>
 		<dependency>
@@ -45,6 +44,22 @@
 			<artifactId>project-commons</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+	<dependency>
+		<groupId>org.ocpsoft.rewrite</groupId>
+		<artifactId>rewrite-servlet</artifactId>
+		<version>2.0.4.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.ocpsoft.rewrite</groupId>
+		<artifactId>rewrite-config-prettyfaces</artifactId>
+		<version>2.0.4.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.ocpsoft.rewrite</groupId>
+		<artifactId>rewrite-integration-cdi</artifactId>
+		<version>2.0.4.Final</version>
+	</dependency>
 	</dependencies>
 
 	<build>

@@ -50,6 +50,7 @@
 		<welcome-file>/index.xhtml</welcome-file>
 	</welcome-file-list>
 	
+	<!--  
 	<security-constraint>
 	<web-resource-collection>
 		<web-resource-name>HtmlAuth</web-resource-name>
@@ -69,6 +70,6 @@
 	</login-config>
 	<security-role>
 		<role-name>Manager</role-name>
-	</security-role>
+	</security-role>-->
 	
 </web-app>

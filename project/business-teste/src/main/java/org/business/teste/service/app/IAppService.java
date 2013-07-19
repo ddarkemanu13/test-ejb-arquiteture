@@ -6,7 +6,7 @@ import org.business.teste.app.App;
 
 public interface IAppService {
 	
-	 public static final String SERVICE_JNDI = "java:global/portal-app/business-teste/AppService";
+	public static final String SERVICE_JNDI = "java:global/portal-app/business-teste/AppService";
 	
 	void appPrint(String string);
 

@@ -14,19 +14,13 @@
 		<h:form>
 			<h2>List Products</h2>
 			
-			<pretty:link mappingId="viewListProduct" >
-				<h:outputLabel value="List" />
-			</pretty:link>  <br />
-			
 			<p:dataTable value="#{urlWrittersController.products}"
-	             var="product"
-	             rows="5"
+	             var="product"  rows="5"  style="width: 40%"
 	             paginatorTemplate="{CurrentPageReport}  {FirstPageLink}
 	                                {PreviousPageLink} {PageLinks}
 	                                {NextPageLink} {LastPageLink}
 	                                {RowsPerPageDropdown}"
-	                                rowsPerPageTemplate="5,10,15"
-	             style="width: 40%">
+	                                rowsPerPageTemplate="5,10,15">
 	             
 	             <p:column headerText="ID" sortBy="#{product.id}" >
 	             	<h:outputText value="#{product.id}" />
