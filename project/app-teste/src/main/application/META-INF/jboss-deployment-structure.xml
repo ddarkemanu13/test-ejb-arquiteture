@@ -6,6 +6,10 @@
 		<dependencies>
 			<module name="com.sun.jsf-impl" />
 			<module name="javax.faces.api" />
+			<module name="org.slf4j.impl" />
+			<module name="org.jboss.logmanager"/>
+        	<module name="org.slf4j" />
+        	<module name="org.apache.log4j" />
 		</dependencies>
 	</deployment>
 
@@ -18,6 +22,10 @@
 		<dependencies>
 			<module name="com.sun.jsf-impl" />
 			<module name="javax.faces.api" />
+			<module name="org.slf4j.impl" />
+			<module name="org.jboss.logmanager"/>
+       		<module name="org.slf4j" />
+        	<module name="org.apache.log4j" />
 		</dependencies>
 	</sub-deployment>
 	
