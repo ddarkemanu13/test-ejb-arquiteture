@@ -13,8 +13,30 @@
 		<h:form>
 			<h2>Teste App web </h2>
 			
-			<h:messages />
+			<h:panelGrid columns="1">
 			
+				<h3>Primefaces</h3>
+				<h:commandLink value="Lazy Load DataTable."  action="/pages/lazyLoadPagination/dataTablePagination?faces-redirect=true"/>
+				<h:commandLink value="Lazy Load DataGrid."  action="/pages/lazyLoadPagination/dataGridPagination?faces-redirect=true"/>
+				<h:commandLink value="Ajax Loading."  action="/pages/ajaxloading?faces-redirect=true"/>
+				<h:commandLink value="Validation on Controller for dialog."  action="/pages/dialogValidation?faces-redirect=true"/>
+				
+				<br />
+				
+				<h3>WS</h3>
+				<h:commandLink value="Basic REST with Jersey framework."  action="/pages/wsclient?faces-redirect=true"/>
+				<p>Obs: need project-ws started</p>
+				
+				<br />
+				<h3>JSF</h3>
+				<h:commandLink value="UrlWritters in JSF."  action="/pages/url-writters/listProducts.xhtml?faces-redirect=true"/>
+				<h:commandLink value="Set GET param in @RequestScope"  action="/pages/param-with-request/page-set-param.xhtml?faces-redirect=true"/>
+				
+				<br />
+				<h3>LOG</h3>
+				<h:commandLink value="Basic configuration to log4j."  action="/pages/log4j-teste?faces-redirect=true"/>
+				
+			</h:panelGrid>
 			
 		</h:form>
 	</body>
