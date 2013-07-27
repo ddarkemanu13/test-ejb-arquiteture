@@ -1,27 +1,27 @@
 test-ejb-arquiteture
 =====
 
-Project to test arquitetures, solutions and utilities using Java EE6
+Project to test arquitetures, solutions and utilities using Java EE6 and frameworks.
 
 Features
 =====
 
 Arquiteture
-  - Basic EJB project 
-  - EJB project deploy as .WAR and EAR file
-  - Depencency between .WAR project and .EAR project 
+  - Basic EJB project. 
+  - EJB project deploy as .WAR and EAR file.
+  - Depencency between .WAR project and .EAR project.
   
 Primefaces 
-  -  Lazy Load DataTable
-  -  Lazy Load DataGrid
-  -  Ajax Loading
-  -  Validation on Controller for dialog
+  -  Lazy Load DataTable.
+  -  Lazy Load DataGrid.
+  -  Ajax Loading.
+  -  Validation on Controller for dialog.
 
 WS
-  - basic REST with Jersey framework
+  - basic REST with Jersey framework.
   
 JSF
-  - UrlWritters in JSF
+  - UrlWritters in JSF.
 
 LOG
-  - basic configuration to log4j
+  - basic configuration to log4j.
