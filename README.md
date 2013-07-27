@@ -22,6 +22,7 @@ WS
   
 JSF
   - UrlWritters in JSF.
+  - Set GET param in @RequestScope
 
 LOG
   - basic configuration to log4j.
