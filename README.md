@@ -10,7 +10,15 @@ Arquiteture
   - Basic EJB project. 
   - EJB project deploy as .WAR and EAR file.
   - Depencency between .WAR project and .EAR project.
-  
+  - Maven Configuration
+
+JSF
+  - UrlWritters in JSF.
+  - Set GET param in @RequestScope
+
+JPA
+  - Default DAO with Entity Manager
+
 Primefaces 
   -  Lazy Load DataTable.
   -  Lazy Load DataGrid.
@@ -19,10 +27,6 @@ Primefaces
 
 WS
   - basic REST with Jersey framework.
-  
-JSF
-  - UrlWritters in JSF.
-  - Set GET param in @RequestScope
 
 LOG
   - basic configuration to log4j.
