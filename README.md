@@ -23,6 +23,7 @@ WS
 JSF
   - UrlWritters in JSF.
   - Set GET param in @RequestScope
+  - Inject ApplicationScope controller in another controller
 
 LOG
   - basic configuration to log4j.
