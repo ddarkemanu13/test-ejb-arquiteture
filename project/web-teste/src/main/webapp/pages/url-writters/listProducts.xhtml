@@ -34,7 +34,9 @@
 	             <p:column headerText="Options" >
 	             	<pretty:link mappingId="viewProduct" title="Open">
 	             		<h:outputLabel value="Open " />
+	             		<f:param value="#{product.categoryNormalize}" />
 	             		<f:param value="#{product.id}" />
+	             		<f:param value="#{product.descriptionNormalize}" />
 	             	</pretty:link>
 		          </p:column>
 	          </p:dataTable>

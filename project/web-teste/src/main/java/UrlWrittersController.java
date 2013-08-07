@@ -3,8 +3,10 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.validator.ValidatorException;
 
 import org.business.teste.product.Product;
 import org.business.teste.service.product.IProductService;
@@ -29,9 +31,13 @@ public class UrlWrittersController implements Serializable {
 	}
 	
 	public void openProduct() {
-		this.productSelected = this.productService.findById(Long.valueOf(this.idUrlParam));
+		try {
+			this.productSelected = this.productService.findById(Long.valueOf(this.idUrlParam));
+		} catch(NumberFormatException ne) {
+			 throw new ValidatorException(new FacesMessage("invalid param"));
+		}
 	}
-
+	
 	public List<Product> getProducts() {
 		return products;
 	}
@@ -53,7 +59,7 @@ public class UrlWrittersController implements Serializable {
 	}
 
 	public void setIdUrlParam(String idUrlParam) {
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		this.idUrlParam = idUrlParam;
 	}
+
 }

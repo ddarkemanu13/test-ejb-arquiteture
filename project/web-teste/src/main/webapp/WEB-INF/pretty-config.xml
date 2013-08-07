@@ -9,7 +9,7 @@
 	</url-mapping> 
 
 	<url-mapping id="viewProduct">
-		<pattern value="/pages/url-writters/product/#{idProduct : urlWrittersController.idUrlParam}" />
+		<pattern value="/pages/url-writters/product/#{category}/#{idProduct : urlWrittersController.idUrlParam}/#{description}" />
 		<view-id value="/pages/url-writters/product.xhtml" />
 		<action>#{urlWrittersController.openProduct}</action>
 	</url-mapping>                    

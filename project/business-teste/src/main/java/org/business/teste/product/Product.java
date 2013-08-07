@@ -1,6 +1,7 @@
 package org.business.teste.product;
 
 import java.io.Serializable;
+import java.text.Normalizer;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,6 +23,14 @@ public class Product implements Serializable {
 	
 	@Column(length = 150, nullable = false)
 	private String description;
+	
+	public String getCategoryNormalize() {
+		return Normalizer.normalize(this.category.toLowerCase(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
+	}
+	
+	public String getDescriptionNormalize() {
+		return Normalizer.normalize(this.description.replace(" ", "-").toLowerCase().replace("/", "-"), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
+	}
 
 	public Long getId() {
 		return id;
